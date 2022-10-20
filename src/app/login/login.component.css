@@ -1,0 +1,44 @@
+.body{
+    display: flex;
+    background-color: rgb(198, 238, 105);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .login{
+    
+      width: 100vh;
+      max-width: 300px;
+      text-align: center;
+    
+    }
+    
+    .titulo{
+        display: flex;
+    align-items: center;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+      
+      }
+      
+    .form-ancho{
+        display: flex;
+        margin-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    
+    }
+    
+    .registrar{
+        margin-top: 10px;
+        align-items: center;
+    }
+    
+    .botonregistrar{
+        width: 90%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }

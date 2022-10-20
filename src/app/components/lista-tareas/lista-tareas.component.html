@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="container col-lg-6 mt-2">
+            <div class = "container">
+                <input type="text" class="form-control mt-4 " placeholder="Ingresar nombre de la tarea" [(ngModel)]="addtareas.nombretarea" >
+                <input type="date" class="form-control mt-4"  placeholder="Ingresar fecha" [(ngModel)]="addtareas.fechatarea">
+                <select class="form-select  mt-4" aria-label=".form-select-lg example" [(ngModel)]="addtareas.calificaciontarea">
+                    <option value="Completada">Completada</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Terminada">Terminada</option>
+                  </select>
+                <div class="container">
+                    <div class="row col-lg-6 ml-2">
+                        <button type="submit" class="btn btn-primary mt-4 " (click)="agregartareas()" >{{auxiliar}}</button>
+                   
+                    </div>
+                </div>
+                
+
+    </div>
+
+</div>
+
+<div class="container col-lg mt-4">
+  <div class="row">
+  <table class="table-responsive table-bordered border-primary">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">fecha</th>
+          <th scope="col">nombre de tarea</th>
+          <th scope="col">Calificacion</th>
+          <th scope="col">modificar</th>
+          <th scope="col">eliminar</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let data of arraytareas; let i=index" >
+        <tr>
+          <th scope="row">{{i+1}}</th>
+          <td>{{data.fechatarea | date:'yyyy-MM-dd'}}</td>
+          <td>{{data.nombretarea}}</td>
+          <td>{{data.calificaciontarea}}</td>
+          <td >
+            <button class="btn btn-primary" (click)="modificar(data)">modificar</button>
+          </td>
+          <td><button class="btn btn-primary" (click)="borrar(data)">eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+

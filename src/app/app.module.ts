@@ -3,14 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ListaTareasComponent } from './components/lista-tareas/lista-tareas.component';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Router, RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+ 
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    ListaTareasComponent,
+    LoginComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

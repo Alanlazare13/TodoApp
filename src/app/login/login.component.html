@@ -1,0 +1,39 @@
+<div class="body">
+    <div class="login">
+            <div  *ngIf="loading" class="spinner-border" role="status"></div>
+
+            <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()" >
+                    <img src="./assets/usuariologin.png" width="60%">
+                    <h1>Login</h1>
+
+
+                    <div class="titulo">
+
+                            <label for="exampleFormControlInput1" class="form-label">Usuario</label>
+                    </div>
+                    
+                    <div class="form-ancho">
+                            <input type="text" class="form-control" formControlName = "user" placeholder="Escriba su usuario">
+                    </div>
+                    
+
+                    <div class="titulo">
+                            
+                            <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
+                    </div>
+
+                    <div class="form-ancho">
+                            <input type="password" class="form-control" formControlName="password" placeholder="Escriba su contraseñea">
+                    </div>
+
+                    <div class="registrar">
+                            <button type="submit" class="btn btn-primary botonregistrar" [disabled]="form.invalid">Ingresar</button> 
+                            <br>
+                            <br>
+                            <br>
+                            <p>el usuario es admin y la contraseña admin123</p>
+                    </div>
+            
+         </form>
+    </div>
+</div>
